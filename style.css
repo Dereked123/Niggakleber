@@ -1,53 +1,71 @@
-@import url('https://fonts.googleleapis.com/css2?family=Bai+Jamjuree&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
 
 :root {
---bg-color: #222831;
---primary-color: #DDDDDD;
---secundary-color: #F05454;
---font:Bai Jamjuree;
+    --bg-color: #222831;
+    --primary-color: #DDDDDD;
+    --secundary-color: #F05454;
+    --font: 'Bai Jamjuree', sans-serif;
 }
-body{
+
+body {
     background-color: var(--bg-color);
-    color:var(--primary-color);
-    font-family:var(--font);
-    height: 100vh;
-    margin:0;
+    color: var(--primary-color);
+    font-family: var(--font);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
-header{
-background-color: var(--primary-color);
-text-align: center;
-padding: 1px;
+
+header {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 1rem 0.5rem;
 }
-h1{
+
+h1 {
     font-size: 2rem;
-    color:var(--bg-color);
+    color: var(--bg-color);
     font-weight: 700;
+    margin: 0.5rem 0;
 }
-nav{
+
+nav {
     display: flex;
     justify-content: center;
-    font-weight: 400;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
-nav a{
+
+nav a {
     text-decoration: none;
-    color:var(--bg-color);
-    margin:0 2rem 1rem 0rem;
+    color: var(--bg-color);
     font-size: 1.2rem;
+    transition: transform 0.1s;
 }
-nav a:hover{
+
+nav a:hover {
     text-decoration: underline;
-transform: scale(0.90);
-transition: trasnform 0.1s;
+    transform: scale(0.95);
 }
+
+.titulo-secao {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
 .graficos-container_texto {
     font-size: 1.3rem;
     text-align: center;
     padding: 2rem;
-    border:var(--secundary-color) solid 2px;
+    border: var(--secundary-color) solid 2px;
+    margin-bottom: 2rem;
 }
+
 #graficos-container {
-margin: 5rem;
+    margin: 5rem;
 }
+
 footer {
     display: flex;
     align-items: center;
@@ -58,8 +76,30 @@ footer {
     height: 3rem;
     margin-top: 2rem;
 }
-span{
+
+span {
     font-weight: bold;
-    color:white;
+    color: white;
     background-color: var(--secundary-color);
+    padding: 0 4px;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 0.5rem 0;
+    }
+
+    #graficos-container {
+        margin: 2rem 1rem;
+    }
+
+    .graficos-container_texto {
+        font-size: 1rem;
+        padding: 1rem;
+    }
 }
